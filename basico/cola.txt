@@ -1,0 +1,33 @@
+    print()
+    String // texto
+    int  // numero inteiro
+    double // quebrados
+    bool // true or false
+    var // varia, pode mudar o valor
+    const // constante, nao muda o valor
+    final // nao vai mudar nada, posto no inicio
+
+    //conta
+    + //adiciona
+    - // subtrai
+    / //divisao
+    ~/  //divisao inteira, vai ignorar os numeros depois da virgula
+    * //mult
+    % // par ou impar
+
+    //comparacao
+    ==
+    =>
+    <=
+    >
+    <
+    !=
+
+    //logicos
+    && // and
+    || // or 
+    ! //  no
+
+    "" // 
+    const claudi = "penis"
+    print("claudi =  $claudi") // interpola
