@@ -8,17 +8,14 @@ calcular as médias das notas de cada um, dado que cada disciplina há 4 ativida
 */
  
  
- 
-import 'dart:io';
- 
- 
 class Aluno{
     String nome;
     String ra;
    
     Set<String> linguagens;
- 
- 
- 
+    Map<String, int> notas;
+
+    Aluno(this.nome, this.ra, this.linguagens, this.notas);
+
 }
  
