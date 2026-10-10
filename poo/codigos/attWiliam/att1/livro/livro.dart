@@ -1,13 +1,7 @@
 import 'CriarLivro.dart';
 
-class Livro {
-    String titulo;
-    String autor;
+void main() {
+  Livro livro = Livro("stefe", "carlos");
 
-
-    
-    void exibirDados() {
-        print("Título: $titulo");
-        print("Autor: $autor");
-    }
+  livro.exibirDados();
 }
