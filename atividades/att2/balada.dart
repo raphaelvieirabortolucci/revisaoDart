@@ -34,12 +34,12 @@ void main() {
     stdout.write("digite a sua idade");
     int idade = int.parse(stdin.readLineSync()!);
     stdout.write("você tem o convite (sim/nao)");
-    String resposta = stdin.readLineSync();
+    String resposta = stdin.readLineSync()!;
 
-    if(idade >= 18 && resposta?.toLowerCase() == "sim"){
+    if(idade >= 18 && resposta.toLowerCase() == "sim"){
         print("Entrada permitida");
         }
     else{
-        print("Entrada negada")
+        print("Entrada negada");
     }
 }

@@ -25,6 +25,8 @@ Combustivel: 33.333 litros
 Conceitos: int, double, multiplicação, divisão e toStringAsFixed().
 */
 
+import 'dart:io';
+
 double calcuDistancia(velocidade, hora) {
     return velocidade * hora;
 }
@@ -34,16 +36,16 @@ double gastoCombustivel(distancia) {
 }
 
 
-import 'dart:io';
 
-vold main() {
+
+void main() {
     stdout.write("Digite a quantidade de horas da viagem");
     double hora = double.parse(stdin.readLineSync()!);
     stdout.write("Digite a quantidade a velocidade do veiculo, em km/h, durante a viagem");
     int km = int.parse(stdin.readLineSync()!);
 
     double distancia = calcuDistancia(km, hora);
-    double combustivel = gastoCombustivel(distancia)
+    double combustivel = gastoCombustivel(distancia);
 
 
     print("Distancia: &{distancia.toStringAsFixed(2)}");
