@@ -11,17 +11,20 @@ calcular as médias das notas de cada um, dado que cada disciplina há 4 ativida
 import 'Aluno.dart';
 import 'dart:io';
 
-// Calcula a media das
+// Pega uma lista com as notas, somas multiplicadas com seus pessoa e tira a media
 double calcularMedia(List<double> notas) {
   List<int> pesos = [4, 4, 6, 6];
   double soma = 0;
   int somaPesos = 0;
 
+  // Percorra a list, multiplica as notas pelo seu peso, de acordo com i posiçao da nota e peso e armazena em soma
+  // Tambem soma os pesos de acordo com suas posiçoes
   for (int i = 0; i < notas.length; i++) {
     soma += notas[i] * pesos[i];
     somaPesos += pesos[i];
   }
 
+  //retorna a media, a soma dividida pelo soma dos pesos
   return soma / somaPesos;
 }
 
@@ -39,14 +42,20 @@ void main() {
       stdout.write("Digite o Registro do aluno: ");
       String raAluno = stdin.readLineSync()!;
 
-      // Linguagens que o aluno conhece (também são as disciplinas)
+      // Linguagens que o aluno conhece
       Set<String> linguagens = {};
       while (true) {
         stdout.write("Digite a linguagem que o aluno sabe: ");
-        linguagens.add(stdin.readLineSync()!);
+        String linguagem = stdin.readLineSync()!.toLowerCase().trim();
+        if (linguagem.isEmpty){
+          print("Digite alguma linguagem");
+          continue;
+        }
+        linguagens.add(linguagem);
 
         stdout.write("Digite y para adicionar outra linguagem, ou qualquer coisa para parar: ");
         String resposta2 = stdin.readLineSync()!;
+        
         if (resposta2.toLowerCase() != "y") {
           break;
         }
