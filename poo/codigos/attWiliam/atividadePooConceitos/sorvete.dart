@@ -7,12 +7,12 @@ Coloque o código junto com o relatório de pesquisa de todos os conceitos discu
  */
 
 class Sorvete {
-  String sabor;
-  double preco;
+  String? _sabor;
+  double? _preco;
 
-  Sorvete(this.sabor, this.preco);
+  Sorvete(this._sabor, this._preco);
 
   void mostrarDetalhes() {
-    print('Sabor: $sabor, Preço: R\$ $preco');
+    print('Sabor: $_sabor, Preço: R\$ $_preco');
   }
 }
